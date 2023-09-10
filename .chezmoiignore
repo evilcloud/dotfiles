@@ -1,5 +1,10 @@
 ~/.config/qtile/__pycache__
+~/.config/qtile/__pycache__/**
 ~/.config/qutiebrowser/dracula/__pycache__
+~/.config/qutiebrowser/dracula/__pycache__/**
 ~/.config/quitebrowser/chache
+~/.config/quitebrowser/chache/**
 ~/.config/quitebrowser/data
+~/.config/quitebrowser/data/**
+
 
