@@ -3,8 +3,8 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-
   # ThinkPad-specific settings
+
   let
     thinkpadConfig = pkgs.writeText "thinkpad-config" ''
       Section "InputClass"
@@ -51,8 +51,8 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_HK.UTF-8";
 
-  # # Enable the X11 windowing system.
-  # services.xserver.enable = true;
+  # Enable the X11 windowing system.
+  services.xserver.enable = true;
 
   # Display manager settings.
 #  services.xserver.displayManager.lightdm.enable = true;
@@ -69,11 +69,8 @@
   services.xserver.displayManager.sessionPackages = [ pkgs.hyprland ];
   services.xserver.windowManager.qtile.enable = true;
 
-  
   # Configure keymap in X11
-  services.xserver.enable = true;
   services.xserver = {
-    # enable = true;
     layout = "us";
     xkbVariant = "";
     extraConfig = ''
@@ -163,7 +160,6 @@
     neovide
     syncthing
     qutebrowser
-    emacs
     magic-wormhole
     chezmoi
   ];
@@ -206,4 +202,3 @@
   system.stateVersion = "23.05"; # Did you read the comment?
 
 }
-
