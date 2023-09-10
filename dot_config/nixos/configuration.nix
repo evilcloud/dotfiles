@@ -164,7 +164,6 @@
     qutebrowser
     magic-wormhole
     chezmoi
-    xmonad
     xmobar
   ];
 
