@@ -162,6 +162,7 @@
     qutebrowser
     magic-wormhole
     chezmoi
+    xmobar
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
