@@ -28,8 +28,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-#  # Load ThinkPad-specific kernel module
-#  boot.kernelModules = [ "thinkpad_acpi" ];
+  # Load ThinkPad-specific kernel module
+  boot.kernelModules = [ "thinkpad_acpi" ];
 
   networking.hostName = "blacksquare"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -73,9 +73,9 @@
   services.xserver = {
     layout = "us";
     xkbVariant = "";
-    extraConfig = ''
-      ${thinkpadConfig}
-    '';
+    # extraConfig = ''
+    #   ${thinkpadConfig}
+    # '';
   };
 
   # Enable CUPS to print documents.
