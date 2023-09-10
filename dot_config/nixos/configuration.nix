@@ -68,6 +68,8 @@
   services.xserver.desktopManager.xfce.enable = true;
   services.xserver.displayManager.sessionPackages = [ pkgs.hyprland ];
   services.xserver.windowManager.qtile.enable = true;
+  services.xserver.windowManager.xmonad.enable = true;
+  services.xserver.windowManager.xmonad.enableContribAndExtras = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -162,6 +164,7 @@
     qutebrowser
     magic-wormhole
     chezmoi
+    xmonad
     xmobar
   ];
 
@@ -177,6 +180,13 @@
   programs.fish.enable = true;
 
   # services.xdg-desktop-portal.enable = true;
+
+  services.picom = {
+    enable = true;
+    backend = "glx";
+    fade = true;
+    shadow = true;
+  };
 
   # List services that you want to enable:
   services.logind.extraConfig = ''
