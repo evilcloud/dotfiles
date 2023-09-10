@@ -36,7 +36,7 @@ mod = "mod4"
 # terminal = guess_terminal()
 terminal = "kitty"
 
-myBrowser = "firefox"
+myBrowser = "qutebrowser"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
