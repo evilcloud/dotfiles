@@ -45,6 +45,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Enable power management
+  powerManagement.enable = true;
+
   # Set your time zone.
   time.timeZone = "Asia/Hong_Kong";
 
@@ -189,9 +192,9 @@
 
   # List services that you want to enable:
   services.logind.extraConfig = ''
-    HandleLidSwitch=suspend
-    HandleLidSwitchExternalPower=suspend
-    HandleLidSwitchDocked=suspend
+    HandleLidSwitch=hibernate
+    HandleLidSwitchExternalPower=hibernate
+    HandleLidSwitchDocked=hibernate
   '';
   
   # Enable the OpenSSH daemon.
@@ -210,5 +213,8 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
-
+  environment.variables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+  };
 }
