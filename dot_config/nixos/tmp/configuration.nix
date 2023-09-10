@@ -51,8 +51,8 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_HK.UTF-8";
 
-  # # Enable the X11 windowing system.
-  # services.xserver.enable = true;
+  # Enable the X11 windowing system.
+  services.xserver.enable = true;
 
   # Display manager settings.
 #  services.xserver.displayManager.lightdm.enable = true;
@@ -73,12 +73,10 @@
   # Configure keymap in X11
   services.xserver.enable = true;
   services.xserver = {
-    # enable = true;
+    enable = true;
     layout = "us";
     xkbVariant = "";
-    extraConfig = ''
-      ${thinkpadConfig}
-    '';
+    extraConfig = thinkpadConfig;
   };
 
   # Enable CUPS to print documents.
@@ -206,4 +204,3 @@
   system.stateVersion = "23.05"; # Did you read the comment?
 
 }
-
