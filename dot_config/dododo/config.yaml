@@ -1,0 +1,18 @@
+files:
+  current: "./dododo.txt"
+  past: "./diddiddid.txt"
+temporal:
+  abandonment: 7
+display:
+  lines: 10
+statuses:
+  done:
+    done
+    complete
+  forget:
+    forget
+    delete
+    remove
+  abandon:
+    abandon
+  
